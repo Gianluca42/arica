@@ -1,0 +1,128 @@
+header{
+	background: $azul;
+	padding: 15px 0;
+	&.open{
+		.bt-menu{
+            hr{
+                &:first-child{
+                    transform: rotate(-45deg);
+                    margin-left: -2px;
+                }
+                &:nth-child(2){
+                    transform: translateX(35px);
+                    opacity: 0;
+                }
+                &:last-child{
+                    transform: rotate(45deg);
+                    margin-top: 8px;
+                }
+            }
+        }//bt-menu
+        .menu{
+        	left: 0;
+        }
+    }//open
+    .wrapper{
+    	@include breakpoint($desktop){
+    		@include flex;
+    		align-items: center;
+    	}
+    }
+
+	.logo{
+		background: url(../imgs/logo-menor.svg) no-repeat;
+		background-size: 100%;
+		width: 139px;
+		height: 49px;
+	}//logo
+
+	.bt-menu{
+	    outline: 0;
+	    display: block;
+	    padding: 0;
+	    background: none;
+	    border: 0;
+	    width: 27px;
+	    height: 18px;
+	    cursor: pointer;
+	    position: absolute;
+	    right: 5%;
+	    top: 23px;
+	    z-index: 10;
+	    @include breakpoint($desktop){
+	        display: none;
+	    }
+
+	    hr{
+	        width: 100%;
+	        display: block;
+	        border: 0;
+	        height: 2px;
+	        margin: 2px 0 7px;
+	        transition: all ease .8s;
+	        background: #fff;
+	        @include breakpoint($desktop){
+	            transition: all ease .2s;
+	        }
+	        &:first-child{
+	            transform-origin: right top;
+	            transform: rotate(0deg);
+	        }
+	        &:nth-child(2){
+	            transform: translateX(0px);
+	            opacity: 1;
+	        }
+	        &:last-child{
+	            transform-origin: right top;
+	            transform: rotate(0deg);
+	            margin-bottom: 0;
+	        }
+	    }
+	}//bt-menu
+
+	.menu{
+		position: fixed;
+		left: -100vw;
+		top: 79px;
+		transition: left ease .8s;
+		background: $bege;
+		width: 100vw;
+		height: calc(100vh - 79px);
+		padding: 0 5%;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		@include breakpoint($desktop){
+			position: relative;
+			left: 0;
+			top: 0;
+			padding: 0;
+			width: initial;
+			background: none;
+			height: initial;
+		}
+		ul{
+			@include breakpoint($desktop){
+				@include flex;
+			}
+			li{
+				&:not(:last-child){
+					margin-bottom: 40px;
+					@include breakpoint($desktop){
+						margin-bottom: 0;
+					}
+				}
+				a{
+					font-size: 21px;
+					font-weight: bold;
+					color: $azul;
+					@include breakpoint($desktop){
+						color: $bege;
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+
+}//header

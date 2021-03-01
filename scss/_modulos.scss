@@ -1,0 +1,114 @@
+.section-titulo{
+  padding: 65px 0;
+  h1{
+    @include t-h1;
+    color: $bege;
+    margin-bottom: 7px;
+  }
+  h2{
+    @include t-subtitulo;
+    color: $bege;
+  }
+}
+
+.texto-sobre{
+  .esq{
+    margin-bottom: 40px;
+    figure{
+      width: 250px;
+      margin: 0 auto;
+    }
+  }
+  .dir{
+    .texto{
+      color: $bege;
+
+
+      h3{
+        font-size: 22px;
+        line-height: 29px;
+        margin-bottom: 30px;
+        @include breakpoint($desktop){
+          font-size: 40px;
+          line-height: 48px;
+        }
+
+      }
+      h4{
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+        @include breakpoint($desktop){
+          font-size: 25px;
+          line-height: 30px;
+        }
+
+      }
+      h5{
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 30px;
+        @include breakpoint($desktop){
+          font-size: 18px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+}
+
+.apresentacao{
+  p{
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 159.3%;
+    color: #192637;
+  }
+}
+
+.section-realizadores{
+  background: $bege;
+  h1{
+      @include t-h1;
+      color: #244742;
+      padding: 65px;
+  }
+  img{
+    width: 73%;
+    margin: 0 auto;
+    padding: 11%;
+    margin-bottom: 38px;
+  }
+  .lista-realizadores{
+
+    @include breakpoint($desktop){
+      @include flex;
+    }
+    .bloco{
+
+      .box-img{
+            height: 200px;
+      }
+
+      @include breakpoint($desktop){
+        width: 33.333%;
+        flex:1;
+      }
+    }
+  }
+  .bloco-t{
+    margin-bottom: 129px;
+    p{
+      line-height: 25px;
+
+    }
+    @include breakpoint($desktop){
+      @include flex;
+    }
+
+  }
+
+
+}

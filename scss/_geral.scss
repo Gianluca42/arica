@@ -1,0 +1,103 @@
+//===|VARIÁVEIS|===//
+//cores//
+$azul: #192637;
+$salmao: #E48E7F;
+$bege: #FFF8E8;
+
+// breakpoint //
+$smallMobile: 320px;
+$mobile: 560px;
+$tablet: 700px;
+$desktop: 990px;
+$medDesktop: 1240px;
+$bigDesktop: 1440px;
+$maxDesktop: 1920px;
+
+// fontes //
+$maven: 'Maven Pro', sans-serif;
+
+
+@mixin t-h1{
+  font-size: 30px;
+  font-weight: 900;
+  font-family: $maven;
+  text-align: center;
+  @include breakpoint($desktop){
+    font-size: 80px;  
+  }
+}
+
+@mixin t-subtitulo{
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  @include breakpoint($desktop){
+    font-size: 40px;
+  }
+}
+
+@mixin flex{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+@mixin flex-block{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+//===|GERAIS|===//
+html{
+  // scroll-behavior: smooth;
+}
+body{
+  font-family: 'Open Sans';
+  &.fixed{
+    overflow: hidden;
+  }
+}
+main{
+}
+img, video{
+  width: 100%;
+  display: block;
+}
+img{
+  height: auto;
+}
+strong, b{
+  font-weight: bold;
+}
+em{
+  font-style: italic;
+}
+a{
+  text-decoration: none;
+}
+
+.wrapper{
+  margin: 0 auto;
+  width: 90%;
+}
+.ir{
+  display: block;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+
+//controle idiomas
+
+.lang-btn{
+  button{
+    opacity: .5;
+    transition: opacity ease .8s;
+    &.active{
+      opacity: 1;
+    }
+  }
+}
+
+.multi-lang:not(.lang-pt){
+  display: none;
+}
