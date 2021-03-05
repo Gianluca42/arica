@@ -71,29 +71,152 @@
 .section-sobre{
 
   .sobre-box{
+    @include flex;
+    padding-top: 23%;
+    @include breakpoint($desktop){
+      padding-top:100px;
+    }
     p{
-
+      font-family: Helvetica;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 136%;
+      order: 2;
+      @include breakpoint($desktop){
+        padding-bottom:0;
+        font-size: 22px;
+        width: 45%;
+        order: 1;
+        align-self: center;
+      }
     }
     img{
+      order:1;
+      padding-bottom:28%;
+      @include breakpoint($desktop){
+        padding-bottom:0;
+        width: 45%;
+        order: 2;
+      }
+    }
+    &.grande{
+      p{
+          @include breakpoint($desktop){
+            width: 100%;
 
+          }
+      }
     }
   }
   .premios-box{
+    @include breakpoint($desktop){
+
+      @include flex;
+    }
     .premio{
-      img{}
-      h1{}
-      h2{}
+      font-family: Helvetica;
+      padding-top: 23%;
+      @include breakpoint($desktop){
+
+        width: 25%;
+        padding:8% 5%;
+      }
+      img{
+        width: 34px;
+        margin: auto;
+      }
+      h1{
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        /* or 122% */
+
+        text-align: center;}
+      h2{
+          font-style: normal;
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 22px;
+          /* or 122% */
+
+          text-align: center;}
     }
   }
 
 }
 .section-socios{
-    h1{}
-  .bloco-socios{
+  width: 90%;
+  margin:0 auto;
+    @include breakpoint($desktop){
+      @include flex;
+      width: 80%;
+      margin:0 auto;
+    }
 
-    .fotos-sobre{
+    h1{
+      @include breakpoint($desktop){
+        width: 90%;
+        text-align: left;
+
+        font-size: 59px;
+      }
 
     }
-    .texto-socio{}
+  .bloco-socios{
+    @include flex;
+      @include breakpoint($desktop){
+        @include flex;
+        padding-bottom: 5%;
+      }
+    h1{
+      margin: 0;
+      font-size: 40px;
+      width: auto;
+      padding-bottom: 25px;
+    }
+    .fotos-sobre{
+        @include breakpoint($desktop){
+          width: 35%;
+        }
+      img{
+        padding-top: 50px;
+          @include breakpoint($desktop){
+            width: 294px;
+            padding-top: 0;
+          }
+        &:last-child{
+          @include breakpoint($desktop){
+
+            padding-top: 5%;
+          }
+        }
+      }
+    }
+    .texto-socio{
+      font-family: Helvetica;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 131%;
+      padding-top: 5% ;
+        @include breakpoint($desktop){
+          width: 55%;
+          padding-top: 0;
+
+        }
+    }
+    &:last-child{
+      .fotos-sobre{
+        @include breakpoint($desktop){
+            order: 2;
+        }
+        order: 1;
+      }
+      .texto-socio{
+        order: 2;
+      }
+    }
   }
 }
