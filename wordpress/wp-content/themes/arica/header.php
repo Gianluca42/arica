@@ -17,43 +17,36 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
+	<link rel='stylesheet' type='text/css' href='<?php bloginfo('template_url')?>/assets/css/owl.carousel.min.css' media='all'>
+	<link rel='stylesheet' type='text/css' href='<?php bloginfo('template_url')?>/assets/css/owl.theme.default.min.css' media='all'>
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="<?php bloginfo('template_url')?>/assets/css/main.css">
+
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'arica' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$arica_description = get_bloginfo( 'description', 'display' );
-			if ( $arica_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $arica_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+<header>
+	<div class="wrapper">
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'arica' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+		<h1><a class="logo ir" href="<?php bloginfo('siteurl')?>">Menis LoFi</a></h1>
+
+		<button class="bt-menu"><hr><hr><hr></button>
+
+		<nav class="menu">
+			<ul>
+				<li><a class="<?php if(is_page('Sintetizadores')){?> ativo <?php } ?>" href="<?php bloginfo('siteurl')?>/sintetizadores">Sobre</a></li>
+				<li><a class="<?php if(is_page('Cursos')){?> ativo <?php } ?>" href="<?php bloginfo('siteurl')?>/cursos">Projetos</a></li>
+				<li><a class="<?php if(is_page('Artistas')){?> ativo <?php } ?> desativado" href="<?php bloginfo('siteurl')?>/artistas">Em breve</a></li>
+				<li><a class="<?php if(is_page('Blog')){?> ativo <?php } ?> desativado" href="<?php bloginfo('siteurl')?>/blogs">Contato</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<main>

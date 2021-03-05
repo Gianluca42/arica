@@ -1,114 +1,99 @@
-.section-titulo{
-  padding: 65px 0;
-  h1{
-    @include t-h1;
-    color: $bege;
-    margin-bottom: 7px;
-  }
-  h2{
-    @include t-subtitulo;
-    color: $bege;
-  }
-}
+.section-home{
 
-.texto-sobre{
-  .esq{
-    margin-bottom: 40px;
-    figure{
-      width: 250px;
-      margin: 0 auto;
-    }
-  }
-  .dir{
-    .texto{
-      color: $bege;
+  .foto-destaque{
 
-
-      h3{
-        font-size: 22px;
-        line-height: 29px;
-        margin-bottom: 30px;
+      height: 72vh;
+      img{
+        display: none;
         @include breakpoint($desktop){
-          font-size: 40px;
-          line-height: 48px;
-        }
-
-      }
-      h4{
-        font-size: 18px;
-        line-height: 24px;
-        margin-bottom: 30px;
-        @include breakpoint($desktop){
-          font-size: 25px;
-          line-height: 30px;
-        }
-
-      }
-      h5{
-        font-size: 16px;
-        line-height: 22px;
-        margin-bottom: 30px;
-        @include breakpoint($desktop){
-          font-size: 18px;
-          line-height: 26px;
+          display: block;
+          width: 305px;
+          height: auto;
+          right: 0;
+          position: absolute;
         }
       }
-    }
   }
-}
-
-.apresentacao{
-  p{
-    font-family: "Open Sans";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 159.3%;
-    color: #192637;
-  }
-}
-
-.section-realizadores{
-  background: $bege;
-  h1{
-      @include t-h1;
-      color: #244742;
-      padding: 65px;
-  }
-  img{
-    width: 73%;
-    margin: 0 auto;
-    padding: 11%;
-    margin-bottom: 38px;
-  }
-  .lista-realizadores{
-
-    @include breakpoint($desktop){
-      @include flex;
-    }
-    .bloco{
-
-      .box-img{
-            height: 200px;
-      }
-
+  .sobre-home{
+    .virada{
+      transform: rotate(180deg);
       @include breakpoint($desktop){
-        width: 33.333%;
-        flex:1;
+        transform: none ;
+          width: 305px;
+          margin: 0;
+          padding-top: 76px;
+      }
+
+    }
+    .normal{
+      @include breakpoint($desktop){
+        display: none;
+      }
+    }
+    background-color: black;
+    p{
+      width: 50%;
+      font-family: Helvetica;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 136%;
+        text-align: left;
+        color: white;
+
+        padding-top: 2.5em;
+        margin-bottom: 2.5em;
+        b{
+          font-weight: 700;
+        }
+        @include breakpoint($desktop){
+          font-size: 22px;
+          text-align: right;
+        }
+
+    }
+    img{
+      max-width: 50%;
+      margin: auto;
+
+    }
+    .wrapper{
+      @include breakpoint($desktop){
+        @include flex;
       }
     }
   }
-  .bloco-t{
-    margin-bottom: 129px;
+
+}
+/////////////////// SOBRE
+
+
+.section-sobre{
+
+  .sobre-box{
     p{
-      line-height: 25px;
 
     }
-    @include breakpoint($desktop){
-      @include flex;
-    }
+    img{
 
+    }
+  }
+  .premios-box{
+    .premio{
+      img{}
+      h1{}
+      h2{}
+    }
   }
 
+}
+.section-socios{
+    h1{}
+  .bloco-socios{
 
+    .fotos-sobre{
+
+    }
+    .texto-socio{}
+  }
 }
