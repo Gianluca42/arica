@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('body').delay(400).fadeIn(1000)  
+    $('body').delay(400).fadeIn(1000)
 
     $(document).scroll(function() {
       var y = $(this).scrollTop();
@@ -9,20 +9,18 @@ $(document).ready(function () {
         $('header').removeClass('desce');
       }
     });
-    
+
 });
 
 $(".carrossel").owlCarousel({
     items: 1,
-    dots: !0,
-    autoplay: !0,
+    autoplay: 1,
     slideSpeed: 300,
   	paginationSpeed: 3000,
-    animateIn: 'fadeIn',
-  	animateOut: 'fadeOut',
   	loop: !0,
-    nav: true,
+    nav: 0,
     autoplayHoverPause: true,
+    mouseDrag:0,
 })
 
 $('.bt-menu').click(function(){

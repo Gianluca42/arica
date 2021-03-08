@@ -34,15 +34,15 @@
 <header>
 	<div class="wrapper">
 
-		<h1><a class="logo ir" href="<?php bloginfo('siteurl')?>">Menis LoFi</a></h1>
+		<h1><a class="logo ir" href="<?php bloginfo('siteurl')?>">Arica Filmes</a></h1>
 
 		<button class="bt-menu"><hr><hr><hr></button>
 
 		<nav class="menu">
 			<ul>
-				<li><a class="<?php if(is_page('Sintetizadores')){?> ativo <?php } ?>" href="<?php bloginfo('siteurl')?>/sintetizadores">Sobre</a></li>
-				<li><a class="<?php if(is_page('Cursos')){?> ativo <?php } ?>" href="<?php bloginfo('siteurl')?>/cursos">Projetos</a></li>
-				<li><a class="<?php if(is_page('Artistas')){?> ativo <?php } ?> desativado" href="<?php bloginfo('siteurl')?>/artistas">Em breve</a></li>
+				<li><a class="<?php if(is_page('Sobre')){?> ativo <?php } ?>" href="<?php bloginfo('siteurl')?>/sobre">Sobre</a></li>
+				<li><a class="<?php if(is_page('Projetos')){?> ativo <?php } ?>" href="<?php bloginfo('siteurl')?>/projetos">Projetos</a></li>
+				<li><a class="<?php if(is_page('Em breve')){?> ativo <?php } ?>" href="<?php bloginfo('siteurl')?>/em-breve">Em breve</a></li>
 				<li><a class="<?php if(is_page('Blog')){?> ativo <?php } ?> desativado" href="<?php bloginfo('siteurl')?>/blogs">Contato</a></li>
 			</ul>
 		</nav>

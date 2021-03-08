@@ -220,3 +220,178 @@
     }
   }
 }
+//////////////////////////////Projetos
+.section-projetos{
+    width: 90%;
+    margin: 0 auto;
+    .sub-menu-projetos{
+      @include flex;
+      width: 100%;
+      @include breakpoint($desktop){
+        padding-top: 54px;
+        height: 123px;
+        width: 70%;
+      }
+      p{
+        margin: 0;
+        align-self: center;
+
+      }
+    }
+    .lista-projetos{
+      @include flex;
+      .container-projetos{
+        width: 100%;
+        height: 169px;
+          margin: 0.4% 0;
+          color: white;
+          position: relative;
+          &:after{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      z-index: 1;
+      content: '';
+      display: block;
+      background: -moz-linear-gradient(180deg, rgba(0, 0, 0, 0) 38.54%, #000000 100%);
+      background: -webkit-linear-gradient(180deg, rgba(0, 0, 0, 0) 38.54%, #000000 100%);
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 38.54%, #000000 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00202020', endColorstr='#202020',GradientType=0 );
+    }
+        .container-text{
+          position: absolute;
+          bottom: 5%;
+          left: 5%;
+          z-index: 2;
+          h1{
+            font-family: Helvetica;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 23px;
+            line-height: 23px;
+            margin: 0;
+          }
+          h2{
+            font-family: Helvetica;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 12px;
+            margin: 0;
+          }
+        }
+        .seta-video{
+          position: absolute;
+          bottom: 5%;
+          right: 4%;
+          z-index: 2;
+          p{
+            font-family: Helvetica;
+            font-style: normal;
+            font-weight: lighter;
+            font-size: 16px;
+            line-height: 17px;
+            margin: 0;
+            text-align: right;
+
+            &:last-child{
+              font-size: 7px;
+              line-height: 10px;
+            }
+          }
+        }
+        @include breakpoint($desktop){
+          width: 49.7%;
+          height: 330px;
+              margin: 0.4% 0;
+        }
+      }
+    }
+}
+////////////////////////////////interna
+.section-dingle-filme{
+  width: 100%;
+  height: 50%;
+
+  .carrossel{
+    .foto{
+
+    }
+  }
+  .info-topo{
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    .info-destaque{
+      p{
+        font-family: Helvetica;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+      }
+      h1{
+        font-family: Couture;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 52px;
+        line-height: 58px;
+        font-family: sans-serif;
+        color: black;
+        text-transform: uppercase;
+      }
+      h2{
+        font-family: Helvetica;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 30px;
+      }
+      h3{
+        font-family: Helvetica;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 21px;
+      }
+    }
+    .premios-box{
+      @include breakpoint($desktop){
+
+        @include flex;
+      }
+      .premio{
+        font-family: Helvetica;
+        padding-top: 23%;
+        @include breakpoint($desktop){
+
+          width: 25%;
+          padding:8% 5%;
+        }
+        img{
+          width: 34px;
+          margin: auto;
+        }
+        h1{
+          font-style: normal;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 22px;
+          /* or 122% */
+
+          text-align: center;}
+        h2{
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 22px;
+            /* or 122% */
+
+            text-align: center;}
+      }
+    }
+  }
+
+}

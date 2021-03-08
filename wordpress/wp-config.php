@@ -20,6 +20,8 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
+define('WP_SITEURL', 'http://arica:8888');
+define('WP_HOME', 'http://arica:8888');
 define( 'DB_NAME', 'wp_arica' );
 
 /** MySQL database username */
