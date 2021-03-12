@@ -11,6 +11,7 @@ header{
 		width: 20%;
 		height: 100%;
 	}
+
 	h1{
 		margin: 0;
 		@include breakpoint($desktop){
@@ -32,7 +33,24 @@ header{
 	&.open{
 		.menu{
 			left: 0;
+			@include flex;
+			.social{
+				left: 53vw;
+				z-index: inherit;
+				bottom: 17vh;
+				width: 30vw;
+
+			}
+
+				p{
+					left: 0;
+					z-index: inherit;
+					bottom: 0;
+				}
+
 		}
+
+
 		.bt-menu{
 			hr{
 				&:first-child{
@@ -58,6 +76,7 @@ header{
 			@include flex;
 			align-items: center;
 		}
+
 	}
 	.logo{
 		width: 176px;
@@ -119,7 +138,7 @@ header{
 		position: fixed;
 	    z-index: 99;
 	    width: 100%;
-	    left: -100vw;
+	    left: -150vw;
 	    top: 70px;
 	    background: #fff;
 	    box-sizing: border-box;
@@ -133,18 +152,58 @@ header{
 	    	height: 100%;
 	    	left: 0;
 	    	top: 0;
-	    	width: 27%;
-				margin: auto;
+	    	width:  100%;
+				margin: 0 auto;
 	    	max-width: 990px;
-	    	padding: 0;
-				padding-top: 82px;
+	    	padding: 4vh 0 7vh 0;
+				@include flex;
+
 	    }
+			.social{
+				left: -150vw;
+				position: absolute;
+				@include flex;
+				@include breakpoint($desktop){
+					margin: 0 auto;
+		    	width: 60%;
+					justify-content: space-evenly;
+					padding-top: 5%;
+					position: relative;
+					left: 0;
+
+				}
+				img{
+					width: 23px;
+					position: relative;
+					display: block;
+				}
+			}
+			p{
+				position: absolute;
+				left: -150vw;
+				font-family: Helvetica;
+				font-style: normal;
+				font-weight: bold;
+				font-size: 11px;
+				line-height: 13px;
+				/* or 118% */
+
+				text-align: right;
+
+				color: #C3D5DE;
+				width: 155.5px;
+					margin: 0 auto;
+					padding: 45px;
+					@include breakpoint($desktop){
+						position: initial;
+					}
+					}
 	    ul{
 				list-style-type:none;
 	    	@include breakpoint($desktop){
 	    		@include flex;
-	    		width: 100%;
-					margin: auto 0;
+	    		width: 37%;
+					margin: 0 auto;
 	    	}
 	    	li{
 	    		&:not(:last-child){
@@ -167,7 +226,7 @@ header{
 							font-family: Helvetica;
 							font-style: normal;
 							font-weight: 300;
-							font-size: 14px;
+							font-size: 16px;
 							line-height: 30px;
 	    			}
 	    			&:hover{

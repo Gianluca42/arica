@@ -26,9 +26,9 @@ get_header();
       <p>Curta-metragem</p>
       <h1><?php the_title(); ?></h1>
       <h2>dirigido por <?php the_field('direcao'); ?></h2>
-      <h3>Algumas breves ocasiões podem mudar nossas vidas. Daniel volta para casa depois de uma viagem de trabalho e começa a refletir sobre a vida e sua solidão. À partir de um encontro casual, descobre que as respostas para seus anseios e dúvidas talvez encontrem-se dentro dele mesmo.</h3>
+      <h3><?php the_field('descricao'); ?></h3>
     </div>
-    <div class="premios-box">
+    <div class="premios-box carrossel  owl-carousel">
       <div class="premio">
         <img src="<?php bloginfo('template_url'); ?>/assets/imgs/icone-prmio.svg" alt="">
           <h1>Nome do Festival ou Prêmio em destaque</h1>
@@ -48,6 +48,33 @@ get_header();
         <img src="<?php bloginfo('template_url'); ?>/assets/imgs/icone-prmio.svg" alt="">
           <h1>Nome do Festival ou Prêmio em destaque</h1>
           <h2>Nome do projeto</h2>
+      </div>
+    </div>
+  </div>
+  <div class="bottom-interna">
+    <div class="trailer">
+      <img src="<?php bloginfo('template_url'); ?>/assets/imgs/video-interna.jpg" alt="">
+    </div>
+    <div class="ficha-tecnica">
+      <h1>Ficha Técnica</h1>
+      <div class="ficha-bloco">
+        <div class="ficha-info">
+          <h2>Produção</h2>
+          <p>Maria da Silva</p>
+        </div>
+        <div class="ficha-info">
+          <h2>Produção</h2>
+          <p>Maria da Silva</p>
+        </div>
+        <div class="ficha-info">
+          <h2>Produção</h2>
+          <p>Maria da Silva</p>
+        </div>
+        <div class="ficha-info">
+          <h2>Produção</h2>
+          <p>Maria da Silva</p>
+        </div>
+
       </div>
     </div>
   </div>

@@ -37,15 +37,24 @@
 		<h1><a class="logo ir" href="<?php bloginfo('siteurl')?>">Arica Filmes</a></h1>
 
 		<button class="bt-menu"><hr><hr><hr></button>
+		<div class="menu">
+			<nav class="menu">
+				<ul>
+					<li><a class="<?php if(is_page('Sobre')){?> ativo <?php } ?>" href="<?php bloginfo('siteurl')?>/sobre">Sobre</a></li>
+					<li><a class="<?php if(is_page('Projetos')){?> ativo <?php } ?>" href="<?php bloginfo('siteurl')?>/projetos">Projetos</a></li>
+					<li><a class="<?php if(is_page('Em breve')){?> ativo <?php } ?>" href="<?php bloginfo('siteurl')?>/em-breve">Em breve</a></li>
+					<li><a class="<?php if(is_page('Contato')){?> ativo <?php } ?> " href="<?php bloginfo('siteurl')?>/contato">Contato</a></li>
+				</ul>
+			</nav>
+			<div class="social">
+				<img src="<?php bloginfo('template_url'); ?>/assets/imgs/Twittericones-header.svg" alt="">
+				<img src="<?php bloginfo('template_url'); ?>/assets/imgs/Instagramicones-header.svg" alt="">
+				<img src="<?php bloginfo('template_url'); ?>/assets/imgs/Behanceicones-header.svg" alt="">
+			</div>
+			<p>© 2020 Arica Filmes
+				Site criado e desenvolvido por Estúdio Pavio</p>
+		</div>
 
-		<nav class="menu">
-			<ul>
-				<li><a class="<?php if(is_page('Sobre')){?> ativo <?php } ?>" href="<?php bloginfo('siteurl')?>/sobre">Sobre</a></li>
-				<li><a class="<?php if(is_page('Projetos')){?> ativo <?php } ?>" href="<?php bloginfo('siteurl')?>/projetos">Projetos</a></li>
-				<li><a class="<?php if(is_page('Em breve')){?> ativo <?php } ?>" href="<?php bloginfo('siteurl')?>/em-breve">Em breve</a></li>
-				<li><a class="<?php if(is_page('Blog')){?> ativo <?php } ?> desativado" href="<?php bloginfo('siteurl')?>/blogs">Contato</a></li>
-			</ul>
-		</nav>
 	</div>
 </header>
 
